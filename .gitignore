@@ -1,0 +1,34 @@
+# System Files
+Thumbs.db
+desktop.ini
+
+# IDE Files
+.vscode/
+.idea/
+*.suo
+*.user
+*.vcxproj*
+
+# Logs and Temporary Files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Compiled Files
+*.class
+*.o
+*.pyc
+*.pyo
+*.pyd
+
+# Build Output
+/dist/
+/build/
+/out/
+
+# Dependencies
+node_modules/
+
+# Sensitive Data
+.env

@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #User {
+    margin-top: auto;
+  }
+  
+  h1 {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  }
+  
+  .healthContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .playerhp {
+    display: flex;
+    height: 50px;
+    width: 1fr;
+  }
+  
+  #locations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  #locations img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  #daytime\ symbol {
+    width: 50px;
+    height: 50px;
+  }
+  

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dracula the Boardgame</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Dracula, the game</h1>
+  <section id="night&day">
+    <h3 id="daycounter">Day 1</h3>
+    <img id="daytime symbol" src="https://cdn3.iconfinder.com/data/icons/symbol-1-1/36/12-512.png" alt="sun or moon picture">
+  </section>
+  <section id="locations">
+  <img src="https://knightstemplar.co/wp-content/uploads/2023/08/galileus_medieval_farming_photo_realistic_c8efa044-96cb-404d-b08c-6ec9703b844c.jpg" alt="picture of the farm" id="farmPicture" onclick="goToLocation('farm')">
+<img src="https://www.shutterstock.com/image-photo/dark-imposing-castle-perched-on-600nw-2493831005.jpg" alt="Picture of the castle" id="castlePicture" onclick="goToLocation('castle')">
+<img src="https://churchchairsdirect.co.uk/wp-content/uploads/2024/04/DALL%C2%B7E-2024-04-25-19.23.41-A-detailed-illustration-of-a-medieval-church-interior-showcasing-Gothic-architectural-elements.-The-scene-includes-tall-pointed-arches-and-intricate.webp" alt="Picture of church" id="churchPicture" onclick="goToLocation('church')">
+<img src="https://images.articlesfactory.com/750x0/86b22f2e-71a7-421a-96b8-8330d300cfa7.webp" alt="Picture of market" id="marketPicture" onclick="goToLocation('market')">
+  </section>
+  <section id="message">
+    <p></p>
+  </section>
+  <div id="playerOne"></div>
+  <div id="playerTwo"></div>
+  <div id="playerThree"></div>
+  <div id="User">
+    <img id="userPortrait"src="" alt="">
+    <h3>Health:</h3>
+    <div class="healthContainer">
+    <img class="playerhp" src="https://e7.pngegg.com/pngimages/616/424/png-clipart-health-video-game-pixel-art-bar-health-game-rectangle.png" alt="">
+    <img class="playerhp" src="https://e7.pngegg.com/pngimages/616/424/png-clipart-health-video-game-pixel-art-bar-health-game-rectangle.png" alt="">
+    <img class="playerhp" src="https://e7.pngegg.com/pngimages/616/424/png-clipart-health-video-game-pixel-art-bar-health-game-rectangle.png" alt="">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
