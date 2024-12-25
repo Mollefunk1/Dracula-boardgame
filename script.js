@@ -62,7 +62,7 @@ function drawCard(location, amount) {
   for (let i = 0; i < amount; i++) {
     const card = location.cards.pop();
     player.hand.push(card);
-    console.log(card);
+    return console.log(card);
   }
 }
 //Shuffle location decks
@@ -79,7 +79,9 @@ function playerTurn() {
   }
 }
 let turnOrder = shuffle(playerList);
-function randomIndex(len) { Math.floor(Math.random() * len);}
+function randomIndex(len) { 
+  return Math.floor(Math.random() * len);
+}
 
 function goToLocation(locationName) {
   if (time === "daytime" && locationName) {
