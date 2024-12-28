@@ -48,7 +48,6 @@ let cpu3 = {
 };
 const playerList = [player.name, cpu1.name, cpu2.name, cpu3.name]
 
-
 // Shuffle function
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -57,15 +56,17 @@ function shuffle(array) {
   }
   return array;
 }
-//Draw card function
+
+// Draw card function
 function drawCard(location, amount) {
   for (let i = 0; i < amount; i++) {
     const card = location.cards.pop();
     player.hand.push(card);
-    return console.log(card);
+    console.log(card);
   }
 }
-//Shuffle location decks
+
+// Shuffle location decks
 shuffle(locations.farm.cards);
 shuffle(locations.market.cards);
 shuffle(locations.church.cards);
@@ -78,7 +79,9 @@ function playerTurn() {
     // Inform player to click on an image to choose location
   }
 }
+
 let turnOrder = shuffle(playerList);
+
 function randomIndex(len) { 
   return Math.floor(Math.random() * len);
 }
@@ -100,24 +103,23 @@ function goToLocation(locationName) {
 // Fix cpuTurn function
 function cpuTurn(cpu) {
   console.log(`It's ${time} and ${cpu.name}'s turn.`);
-  let locationName = randomIndex(3);
+  let locationName = randomIndex(4); // There are 4 locations
   let location = Object.values(locations)[locationName];
   if (location) {
-    console.log(`You moved to the ${locationName}.`);
+    console.log(`CPU moved to the ${Object.keys(locations)[locationName]}.`); // Correctly log the location name
     drawCard(location, 2);
   } else {
     console.log("Invalid location.");
   }
-  console.log(currentPlayer.hand);
 }
 
-
+// Update UI function
 function updateUI() {
   // Update the day counter
   document.getElementById('daycounter').innerText = `Day ${dayCounter}`;
 
   // Change the daytime picture based on whether it is daytime or nighttime
-  const dayNightImage = document.getElementById('daytime symbol');
+  const dayNightImage = document.getElementById('daytime-symbol');
   if (time === "daytime") {
     dayNightImage.src = "https://cdn3.iconfinder.com/data/icons/symbol-1-1/36/12-512.png"; // Daytime image
   } else {
@@ -125,20 +127,13 @@ function updateUI() {
   }
 }
 
-// Call updateUI function whenever there is a change in dayCounter or time
-
 // Example usage to allow exiting prompt loop
 let turnCounter = 1;
 let draculaPowerMeter = 1;
 let dayCounter = 1;
 let nightCounter = 1;
 
-const turnAnnouncement = document.createElement(`h3`);
-turnAnnouncement.innerText = "It is now ${currentPlayer}s turn.";
 const messageSection = document.getElementById('message');
-messageSection.appendChild(turnAnnouncement);
-
-
 
 // Daytime game loop
 while (time === "daytime") {
