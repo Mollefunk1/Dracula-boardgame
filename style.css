@@ -5,25 +5,17 @@ body {
   margin: 0;
 }
 
-#User {
-  margin-top: auto;
-}
-
 h1 {
   display: flex;
   flex-direction: column;
   background-color: lightblue;
 }
 
-.healthContainer {
+#night-day {
   display: flex;
-  flex-direction: row;
-}
-
-.playerhp {
-  display: flex;
-  height: 50px;
-  width: 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 #locations {
@@ -40,4 +32,40 @@ h1 {
 #daytime-symbol {
   width: 50px;
   height: 50px;
+}
+
+#message {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#players {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+}
+
+.healthContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.hp {
+  display: flex;
+  height: 50px;
+  width: 1fr;
 }

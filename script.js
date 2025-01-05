@@ -1,5 +1,5 @@
 console.log("Hello World!");
-// This is a Dracula board game prototypev1.
+// This is a Web version of the Dracula board game.
 
 const locations = {
   farm: {
@@ -132,6 +132,16 @@ let turnCounter = 1;
 let draculaPowerMeter = 1;
 let dayCounter = 1;
 let nightCounter = 1;
+
+function incrementDayCounter() {
+  dayCounter++;
+  turnCounter = 0; // Reset turn counter when a new day begins
+}
+
+function incrementNightCounter() {
+  nightCounter++;
+  turnCounter = 0; // Reset turn counter when a new night begins
+}
 
 const messageSection = document.getElementById('message');
 
